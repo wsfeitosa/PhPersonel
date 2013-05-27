@@ -2,38 +2,33 @@
 	<?php echo form_open("/usuarios/login",Array('id' => 'form_login'));?>
 	<div id="content">
 		
-		<table align="center" id="rounded-corner" summary="Listagens de Custos Gerais">
-		 <thead>
+		<table align="center" >
+		 
 			<tr>
-				<th scope="col" class="rounded-company">Número</th>
-	            <th scope="col" class="rounded-q1">Descrição</th>
-	            <th scope="col" class="rounded-q2">Valor</th>
-	            <th scope="col" class="rounded-q3">Custo Fixo</th>
-	            <th scope="col" class="rounded-q4">Ações</th>	            
+				<th><label>Número</label></th>
+	            <th><label>Descrição</label></th>
+	            <th><label>Valor</label></th>
+	            <th><label>Custo Fixo</label></th>
+	            <th><label>Ações</label></th>	            
 			</tr>			
-		 </thead>
-		 <tfoot>
-	    	<tr>
-	        	<td colspan="4" class="rounded-foot-left"><em><?php echo $this->pagination->create_links(); ?></em></td>
-	        	<td class="rounded-foot-right">&nbsp;</td>
-	        </tr>
-         </tfoot>
-         <tbody>
+		 
 		<?php foreach($despesas as $despesa):?>
 			
 			<tr>				
-				<td><?php echo $despesa->getCostNumber();?></td>
-				<td><?php echo $despesa->getCostDescription();?></td>
-				<td><?php echo $despesa->getCostValue();?></td>
-				<td><?php echo $despesa->getFixedCost() == "S" ? "SIM" : "NÃO"; ?></td>
+				<td><label><?php echo $despesa->getCostNumber();?></label></td>
+				<td><label><?php echo $despesa->getCostDescription();?></label></td>
+				<td><label><?php echo $despesa->getCostValue();?></label></td>
+				<td><label><?php echo $despesa->getFixedCost() == "S" ? "SIM" : "NÃO"; ?></label></td>
 				<td>
+					<label>
 					<?php echo anchor("#","Vizualizar");?> |
 					<?php echo anchor("#","Alterar");?> |
 					<?php echo anchor("#","Excluir");?>
+					</label>
 				</td>				
 			</tr>
 		<?php endforeach;?>	
-		</tbody>
+		
 		</table>
 		
 	</div>
