@@ -1,4 +1,9 @@
 <?php
+if( ! isset($_SESSION) )
+{
+	session_start();
+}	
+
 class Usuario_Model extends CI_Model{
 	
 	public function __construct()
@@ -28,6 +33,7 @@ class Usuario_Model extends CI_Model{
 		}
 		else
 		{
+			$_SESSION['user_id'] = $rs->row()->user_id;
 			return TRUE;
 		}		
 		

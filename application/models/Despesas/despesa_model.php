@@ -1,15 +1,19 @@
 <?php
+if( ! isset($_SESSION) )
+{
+	session_start();
+}
+
 class Despesa_model extends CI_Model{
 	
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model("Despesas/despesa_entity");
+		$this->load->model("Despesas/despesa_entity");									
 	}
 	
 	public function getEntries( $number = 10, $starts = 0 )
-	{
-		
+	{		
 		$this->db->
 				select("costs.*")->
 				from("phpersonel.costs")->

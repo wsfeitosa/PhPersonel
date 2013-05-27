@@ -1,3 +1,9 @@
+<?php
+if( ! isset($_SESSION) )
+{
+	session_start();
+}
+?>
 <?php echo load_css("theme.css");?>
 <?php echo load_css("source/style.css");?>
 <?php echo load_css("smoothness/jquery-ui-1.10.3.custom.css");?>
@@ -13,9 +19,10 @@
 	</div>
 	<div id="navigation">
 		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Despesas</a></li>
-			<li><a href="#">Receitas</a></li>
-			<li><a href="#">Pagamentos</a></li>
+			<li><a href="http://<?php echo $_SERVER['HTTP_HOST'] ?>/PhPersonel/">Home</a></li>
+			<li><a href="http://<?php echo $_SERVER['HTTP_HOST'] ?>/PhPersonel/index.php/despesas/listView/">Despesas</a></li>
+			<li><a href="http://<?php echo $_SERVER['HTTP_HOST'] ?>/PhPersonel/index.php/receitas/listView/">Receitas</a></li>
+			<li><a href="http://<?php echo $_SERVER['HTTP_HOST'] ?>/PhPersonel/index.php/pagamentos/listView/">Pagamentos</a></li>
+			<li><a href="http://<?php echo $_SERVER['HTTP_HOST'] ?>/PhPersonel/index.php/home/logoff">Sair</a></li>
 		</ul>
 	</div>

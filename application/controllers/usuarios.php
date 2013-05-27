@@ -1,4 +1,9 @@
 <?php
+if( ! isset($_SESSION) )
+{
+	session_start();
+}
+
 class Usuarios extends CI_Controller{
 	
 	public function __construct()
@@ -6,7 +11,7 @@ class Usuarios extends CI_Controller{
 		parent::__construct();
 		$this->load->helper(array('form','url'));
 		$this->load->model("Usuarios/usuario_entity");
-		$this->load->model("Usuarios/usuario_model");
+		$this->load->model("Usuarios/usuario_model");						
 	}
 	
 	public function index()

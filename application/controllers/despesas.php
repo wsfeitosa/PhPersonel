@@ -1,4 +1,9 @@
 <?php
+if( ! isset($_SESSION) )
+{
+	session_start();
+}	
+
 class Despesas extends CI_Controller{
 	
 	public function __construct()
@@ -7,7 +12,13 @@ class Despesas extends CI_Controller{
 		$this->load->model("Despesas/despesa_entity");
 		$this->load->model("Despesas/despesa_model");
 		$this->load->helper(Array('url','form'));
-		$this->output->enable_profiler(TRUE);
+		$this->output->enable_profiler(FALSE);
+		
+		if( ! isset($_SESSION['user_id']) )
+		{
+			redirect("usuarios");
+		}
+		
 	}
 	
 	public function index()
