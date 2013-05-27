@@ -1,7 +1,7 @@
 <?php
 include_once APPPATH . "models/Interfaces/entity.php";
 
-class Desepesa_Entity implements Entity{
+class Despesa_Entity implements Entity{
 	
 	protected $cost_id, $cost_number, $cost_description, $cost_id_category, 
 			   $cost_value, $fixed_cost, $cost_inserted_user_id, $cost_inserted_date;

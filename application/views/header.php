@@ -1,4 +1,5 @@
 <?php echo load_css("theme.css");?>
+<?php echo load_css("source/style.css");?>
 <?php echo load_css("smoothness/jquery-ui-1.10.3.custom.css");?>
 <?php echo load_css("smoothness/jquery-ui-1.10.3.custom.min.css");?>
 <?php echo load_js("jquery-ui/js/jquery-1.9.1.js");?>
