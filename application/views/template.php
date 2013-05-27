@@ -1,4 +1,4 @@
-<?php echo load_css("style.css");?>
+<?php echo load_css("theme.css");?>
 <div id="container">
 	<div id="header">
 		<h1>
