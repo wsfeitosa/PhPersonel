@@ -21,10 +21,8 @@ class Home extends CI_Controller{
 	}
 	
 	public function index()
-	{
-		$this->load->view("header");
-		$this->load->view("content");
-		$this->load->view("footer");		
+	{		
+		$this->load->view("home/index");				
 	}
 	
 	public function logoff()
